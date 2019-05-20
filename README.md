@@ -37,6 +37,13 @@ url: http://localhost:8080/Recipe-Matcher/index.jsp
 h)	Click on "Register/Login"  & Enter the credentials to login:
 a.	User: apoorva.12993@gmail.com
 b.	Password: 12993
+While adding ingredients through excel file, don't forget to change the path of the folder in the following  files:
+a. In the source code go to: com.recipes.controller
+Open ProcessIngredients.java and go to line 25. Change the value of variable "UPLOAD_DIRECTORY" to the path of folder where your excel file is present. 
+b. In the source code go to: com.recipes.dao
+Open ProcessExcelFile.java and go to line 38. 
+String FILE_PATH = "C:/Users/ApoorvaK/Documents/uploads/user_" + Integer.toString(id) + ".xlsx"  ;
+In the above line only change "C:/Users/ApoorvaK/Documents/uploads/" part, keep everything else as it is. 
 #
 #
 4.	Key Point to remember:
